@@ -14,6 +14,6 @@ class Solution(object):
 		# Check if 'target-v' is key in my created dictionary and simultaneously assert 
 		# that value pointed to by that key is not i.
 		# If this is ever true, return tuple i, final_dict.get(target-v)
-		ret_list = next(( (i, final_dict.get(target-v)) for i, v in enumerate(nums) if final_dict.get(target-v) != i), None)
+		ret_list = next(( (i, final_dict.get(target-v)) for i, v in enumerate(nums) if final_dict.get(target-v, i) != i), None)
 
 		return ret_list
