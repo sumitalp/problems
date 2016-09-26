@@ -1,5 +1,8 @@
 # Codility 'Binary Gap' problem
 
+
+# Solution: 1
+
 def solution(N):
     # write your code in Python 2.7
     max_gap = 0
@@ -22,6 +25,24 @@ def solution(N):
                 
         N //= 2
     
+    return max_gap
+
+
+
+# Solution: 2
+
+def solution(N):
+    s = "{0:b}".format(N)
+    max_gap = 0
+    curr_gap = 0
+    
+    for i in s:
+        if i=='0':
+            curr_gap += 1
+        if i=='1':
+            if max_gap < curr_gap:
+                max_gap = curr_gap
+            curr_gap = 0
     return max_gap
 
 # Worst Complexity O(log(n))
