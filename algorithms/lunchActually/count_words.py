@@ -1,4 +1,7 @@
 def countWords(string):
+	if string.islower() or string.isupper():
+        return 1
+        
     count = 1 if len(string) > 0 else 0
     
     for s in string:
