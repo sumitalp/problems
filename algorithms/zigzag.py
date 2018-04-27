@@ -23,3 +23,5 @@ def convert(s, num_rows):
 
 print(convert("PAYPALISHIRING", 3))
 print(convert("PAYPALISHIRING", 4))
+
+print(convert("FREIGHTHUBISHIRING", 3))
