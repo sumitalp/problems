@@ -11,7 +11,7 @@
 
 Output: 1 2 5 6
 
-Approach: We use vertical ordering
+Approach: We use vertical ordering. This approach does not require a queue. Here we use the two variables, one for vertical distance of current node from the root and another for the depth of the current node from the root. We use the vertical distance for indexing. If one node with the same vertical distance comes again, we check if depth of new node is lower or higher with respect to the current node with same vertical distance in the map. If depth of new node is lower, then we replace it.
 '''
 
 class Node:
