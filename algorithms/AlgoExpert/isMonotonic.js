@@ -15,6 +15,11 @@ Sample Input:
 array = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]
 
 Sample Output: true
+
+Approach:
+1. Find if it is non increasing.
+2. Find if it is non decreasing.
+3. Then return either both cases found.
 */
 
 
