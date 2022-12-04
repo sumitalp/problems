@@ -31,3 +31,23 @@ def longest_common_prefix(strs):
 	return os.path.commonprefix(strs)
 
 print(longest_common_prefix(["flower","flow","flight"]))
+
+def longest_prefix_divide_conquer(a: list, low, high):
+	# Time Complexity: O(NM) N=length of strs, M=length of characters
+	# Space Complexity: O(M log N)
+  if not a:
+    return ""
+    
+  if low==high:
+    return a[low]
+  
+  # Using divide and conquer
+  if high > low:
+    mid = low + (high-low)//2
+    s1 = longest_prefix_divide_conquer(a, low, mid)
+    s2 = longest_prefix_divide_conquer(a, mid+1, high)
+    
+    return find_longest_common_prefix(s1, s2)
+
+strs = ["flower","flow","flight"]
+print(longest_prefix_divide_conquer(strs, 0, len(strs)-1))
